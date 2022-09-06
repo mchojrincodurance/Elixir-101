@@ -16,7 +16,11 @@ defmodule FizzBuzz do
 	if rem(number, 3) == 0 do
 		"Fizz"
   	else
-		Integer.to_string(number) 
+		if rem(number, 5) == 0 do
+			"Buzz"
+		else
+			Integer.to_string(number) 
+		end
   	end
   end
 end
