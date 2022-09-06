@@ -1,23 +1,21 @@
 defmodule FizzBuzzTest do
   use ExUnit.Case, async: true
+  use ExUnit.Parameterized
   doctest FizzBuzz
 
-  test "Should convert simple numbers" do
-    assert FizzBuzz.convert(1) == "1"
-    assert FizzBuzz.convert(2) == "2"
-  end
-
-  test "Should convert multiples of 3 into 'Fizz'" do
-    assert FizzBuzz.convert(3) == "Fizz"
-    assert FizzBuzz.convert(6) == "Fizz"
-  end
-
-  test "Should convert multiples of 5 into 'Buzz'" do
-    assert FizzBuzz.convert(5) == "Buzz"
-    assert FizzBuzz.convert(10) == "Buzz"
-  end
-
-  test "Should convert multiples of 3 and 5 into 'FizzBuz'" do
-    assert FizzBuzz.convert(15) == "FizzBuzz"
+  test_with_params "Should convert numbers into strings according to the rules",
+    fn (number, expected) ->
+    	assert FizzBuzz.convert(number) == expected
+    end do
+	[
+	 { 1, "1" },
+	 { 2, "2" },
+	 { 3, "Fizz" },
+	 { 6, "Fizz" },
+	 { 5, "Buzz" },
+  	 { 10, "Buzz" },
+	 { 15, "FizzBuzz" },
+	 { 22, "22" }
+	]
   end
 end
