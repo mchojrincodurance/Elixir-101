@@ -13,6 +13,6 @@ defmodule FizzBuzz do
 
   """
   def convert(number) do
-  	"1" 
+  	Integer.to_string(number) 
   end
 end
