@@ -13,6 +13,10 @@ defmodule FizzBuzz do
 
   """
   def convert(number) do
-  	Integer.to_string(number) 
+	if number == 3 do
+		"Fizz"
+  	else
+		Integer.to_string(number) 
+  	end
   end
 end
