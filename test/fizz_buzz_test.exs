@@ -1,5 +1,5 @@
 defmodule FizzBuzzTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest FizzBuzz
 
   test "Should convert simple numbers" do
