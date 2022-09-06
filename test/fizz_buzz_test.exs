@@ -9,5 +9,6 @@ defmodule FizzBuzzTest do
 
   test "Should convert multiples of 3 into 'Fizz'" do
     assert FizzBuzz.convert(3) == "Fizz"
+    assert FizzBuzz.convert(6) == "Fizz"
   end
 end
