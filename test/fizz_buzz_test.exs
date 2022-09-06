@@ -14,5 +14,10 @@ defmodule FizzBuzzTest do
 
   test "Should convert multiples of 5 into 'Buzz'" do
     assert FizzBuzz.convert(5) == "Buzz"
+    assert FizzBuzz.convert(10) == "Buzz"
+  end
+
+  test "Should convert multiples of 3 and 5 into 'FizzBuz'" do
+    assert FizzBuzz.convert(15) == "FizzBuzz"
   end
 end
