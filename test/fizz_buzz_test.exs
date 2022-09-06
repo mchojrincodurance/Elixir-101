@@ -4,5 +4,6 @@ defmodule FizzBuzzTest do
 
   test "Should convert simple numbers" do
     assert FizzBuzz.convert(1) == "1"
+    assert FizzBuzz.convert(2) == "2"
   end
 end
